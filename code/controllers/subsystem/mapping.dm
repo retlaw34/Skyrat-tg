@@ -149,7 +149,7 @@ SUBSYSTEM_DEF(mapping)
 	// Run map generation after ruin generation to prevent issues
 	run_map_generation()
 	// Generate our rivers, we do this here so the map doesn't load on top of them
-	setup_rivers()
+	//setup_rivers()
 	// Add the first transit level
 	var/datum/space_level/base_transit = add_reservation_zlevel()
 	require_area_resort()
@@ -757,6 +757,9 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 /datum/controller/subsystem/mapping/proc/initialize_biomes()
 	for(var/biome_path in subtypesof(/datum/biome))
 		var/datum/biome/biome_instance = new biome_path()
+		biomes[biome_path] += biome_instance
+	for(var/biome_path in subtypesof(/datum/adv_biome))
+		var/datum/adv_biome/biome_instance = new biome_path()
 		biomes[biome_path] += biome_instance
 
 /datum/controller/subsystem/mapping/proc/reg_in_areas_in_z(list/areas)

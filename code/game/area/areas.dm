@@ -206,7 +206,12 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		var/list/turfs = list()
 		for(var/turf/T in contents)
 			turfs += T
-		map_generator.generate_terrain(turfs, src)
+		if(istype(map_generator, /datum/advanced_map_generator))
+			var/datum/advanced_map_generator/new_map_generator = map_generator
+			new_map_generator.generate_terrain(turfs, src)
+			new_map_generator.populate_turfs(turfs, src)
+		else
+			map_generator.generate_terrain(turfs, src)
 
 /area/proc/test_gen()
 	if(map_generator)

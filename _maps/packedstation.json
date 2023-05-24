@@ -1,0 +1,16 @@
+{
+	"version": 1, 
+	"map_name": "Packedstation",
+    "map_path": "map_files/PackedStation",
+    "map_file": "PackedStation.dmm",
+    "shuttles": {
+	    "cargo": "cargo_kilo",
+	    "ferry": "ferry_fancy",
+	    "whiteship": "whiteship_cere",
+	    "emergency": "emergency_packed"
+	},
+	"maptype": "station",
+	"allow_custom_shuttles": false,
+	"maptype": "goonlite",
+	"minetype": "none"
+}

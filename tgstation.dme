@@ -7033,4 +7033,11 @@
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\sentinel.dm"
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\spitter.dm"
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\warrior.dm"
+#include "z_modular_event\mapgen\_biome.dm"
+#include "z_modular_event\mapgen\_MapGenerator.dm"
+#include "z_modular_event\mapgen\SingleTurf.dm"
+#include "z_modular_event\mapgen\planet_turfs\lavaland.dm"
+#include "z_modular_event\mapgen\planetary\_PlanetGenerator.dm"
+#include "z_modular_event\mapgen\planetary\LavaGenerator.dm"
+#include "z_modular_event\mapgen\single_biome\_SingleBiome.dm"
 // END_INCLUDE
