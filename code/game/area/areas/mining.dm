@@ -154,7 +154,7 @@
 	power_equip = FALSE
 	power_light = FALSE
 	ambience_index = AMBIENCE_MINING
-	area_flags = VALID_TERRITORY | UNIQUE_AREA | FLORA_ALLOWED
+	area_flags = VALID_TERRITORY | UNIQUE_AREA | CAVES_ALLOWED | FLORA_ALLOWED | MOB_SPAWN_ALLOWED
 	min_ambience_cooldown = 70 SECONDS
 	max_ambience_cooldown = 220 SECONDS
 
@@ -165,7 +165,6 @@
 /area/lavaland/surface/outdoors/unexplored //monsters and ruins spawn here
 	icon_state = "unexplored"
 	area_flags = VALID_TERRITORY | UNIQUE_AREA | CAVES_ALLOWED | FLORA_ALLOWED | MOB_SPAWN_ALLOWED
-	map_generator = /datum/advanced_map_generator/planet_generator/lava
 
 /area/lavaland/surface/outdoors/unexplored/danger //megafauna will also spawn here
 	icon_state = "danger"

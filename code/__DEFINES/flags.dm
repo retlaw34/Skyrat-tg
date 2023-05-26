@@ -132,7 +132,7 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 /// If engravings are persistent in this area
 #define PERSISTENT_ENGRAVINGS (1<<14)
 /// Mobs that die in this area don't produce a dead chat message
-#define 	 (1<<15)
+#define NO_DEATH_MESSAGE (1<<15)
 /// This area should have extra shielding from certain event effects
 #define EVENT_PROTECTED (1<<16)
 

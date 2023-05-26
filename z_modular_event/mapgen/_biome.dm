@@ -49,7 +49,6 @@
 /// time spent populating a planet.
 /datum/adv_biome/proc/populate_turf(turf/gen_turf, list/feature_list, list/mob_list)
 
-
 	if(isclosedturf(gen_turf))
 		return
 	var/turf/open/open_turf = gen_turf
@@ -105,8 +104,7 @@
 		if(can_spawn)
 			spawned_mob = new picked_mob(open_turf)
 			// insert at the head of the list, so the most recent mobs get checked first
-//			if(mob_list)
-//				mob_list.Insert(1, spawned_mob)
+			mob_list.Insert(1, spawned_mob)
 			open_turf.flags_1 |= NO_LAVA_GEN
 
 /datum/adv_biome/cave
@@ -114,6 +112,6 @@
 	var/closed_turf_types =  list(/turf/closed/mineral/random/volcanic = 1)
 
 /datum/adv_biome/cave/get_turf_type(turf/gen_turf, string_gen)
-	// gets the character in string_gen correspon ding to gen_turf's coords. if it is nonzero,
+	// gets the character in string_gen corresponding to gen_turf's coords. if it is nonzero,
 	// place a closed turf; otherwise place an open turf
 	return pick_weight(text2num(string_gen[world.maxx * (gen_turf.y - 1) + gen_turf.x]) ? closed_turf_types : open_turf_types)

@@ -614,7 +614,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/cryopod/prison, 18)
 /obj/effect/mob_spawn/ghost_role/create(mob/mob_possessor, newname)
 	var/mob/living/spawned_mob = ..()
 	var/obj/machinery/computer/cryopod/control_computer = find_control_computer()
-	
+
 	var/alt_name = get_alt_name()
 	GLOB.ghost_records.Add(list(list("name" = spawned_mob.real_name, "rank" = alt_name ? alt_name : name)))
 	if(control_computer)
@@ -636,7 +636,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/cryopod/prison, 18)
 /**
  * Returns the the alt name for this spawner, which is 'outfit.name'.
  *
- * For when you might want to use that for things instead of the name var. 
+ * For when you might want to use that for things instead of the name var.
  * example: the DS2 spawners, which have a number of different types of spawner with the same name.
  */
 /obj/effect/mob_spawn/ghost_role/get_alt_name()

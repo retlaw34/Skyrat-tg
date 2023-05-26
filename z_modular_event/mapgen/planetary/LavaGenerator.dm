@@ -360,6 +360,7 @@
 	icon = 'z_modular_event/mapgen/icons/obj/flora/lavarocks.dmi'
 	icon_state = "basalt"
 	light_color = "#ab4907"
+	resistance_flags = LAVA_PROOF
 	light_power = 3
 	light_range = 2
 
@@ -369,6 +370,7 @@
 	icon = 'z_modular_event/mapgen/icons/obj/flora/lavarocks.dmi'
 	icon_state = "lavarocks"
 	gender = PLURAL
+	resistance_flags = LAVA_PROOF
 
 /obj/structure/flora/rock/asteroid
 	name = "pebbles"
@@ -433,3 +435,4 @@
 	desc = "A volcanic rock, one of the few familiar things on this planet."
 	icon_state = "basalt"
 	icon = 'z_modular_event/mapgen/icons/obj/flora/rocks.dmi'
+	resistance_flags = LAVA_PROOF

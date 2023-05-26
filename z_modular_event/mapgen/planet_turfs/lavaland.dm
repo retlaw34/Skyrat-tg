@@ -112,6 +112,4 @@
 	gender = PLURAL
 	light_power = 1
 	light_range = 2
-	pixel_x = -3
-	pixel_y = -3
 

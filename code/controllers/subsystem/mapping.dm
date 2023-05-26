@@ -477,6 +477,13 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 /datum/controller/subsystem/mapping/proc/run_map_generation()
 	for(var/area/A as anything in GLOB.areas)
 		A.RunGeneration()
+	if(config.minetype == "lavaland")
+		var/datum/advanced_map_generator/new_map_generator = new /datum/advanced_map_generator/planet_generator/lava()
+		var/list/turfs = list()
+		for(var/turf/T in get_area_turfs(/area/lavaland/surface/outdoors/unexplored, subtypes = TRUE))
+			turfs += T
+		new_map_generator.generate_terrain(turfs)
+		new_map_generator.populate_turfs(turfs)
 
 /datum/controller/subsystem/mapping/proc/maprotate()
 	if(map_voted || SSmapping.next_map_config) //If voted or set by other means.
